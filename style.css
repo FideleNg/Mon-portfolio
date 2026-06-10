@@ -196,7 +196,7 @@ header
 }
 #profile
 {
-    position:fixed;
+    position:absolute;
     display:flex;
     border: 1px solid #081b29;
     border-radius: 50%;
@@ -225,5 +225,5 @@ header
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
-    background: url(background-about.png);
+    /* background: url(background-about.png); */
 }
