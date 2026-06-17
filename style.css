@@ -1,3 +1,4 @@
+/* La partie "Animation" */
 @keyframes slideRight
 {
     0%{
@@ -54,6 +55,7 @@
         opacity:1;
     }
 }
+/* Toute la page  */
 *
 {
     margin: 0;
@@ -61,10 +63,13 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* pour le corps */
 body
 {
     color: #ededed;
+    background:#081b29;
 }
+
 header
 {
     position: fixed;
@@ -72,7 +77,7 @@ header
     top: 0;
     width: 100%;
     padding: 20px 10px;
-    background: transparent;
+    background: #051129;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,6 +111,7 @@ header
 {
     color: #0ef;
 }
+/* La partie "Home" */
 .home
 {
     position:relative;
@@ -203,7 +209,7 @@ header
     width: 400px;
     height: 430px;
     right: 80px;
-    top: 85px;
+    top: 95px;
     opacity: 0;
     object-fit: cover;
     animation: slideMedium 1s ease forwards;
@@ -218,12 +224,143 @@ header
     margin-right: 10px;
     padding-bottom: 15px;
 }
+/* La partie "About" */
 .about
 {
-    /* background-color: #081b29; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
-    /* background: url(background-about.png); */
+}
+.about-img img
+{
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+}
+#profile-about 
+{
+    position: relative;
+    display: flex;
+    border: 1px solid #081b29;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    left: 80px;
+    top: 30px;
+    opacity: 0;
+    object-fit: cover;
+    animation: slideMedium 1s ease forwards;
+    box-shadow: 0 0 5px #0ef, 0 0 15px #081b29,
+    0 0 30px #0ef;
+}
+.about-text h2
+{
+    font-size: 60px;
+}
+.about-text h2 span
+{
+    color: #0ef;
+}
+.about-text h4
+{
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 1.7;
+    color: #fff;
+    margin: 15px 0 30px;
+}
+.about-text p
+{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+#services
+{
+    color:aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sub-title
+{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title span
+{
+    color: #0ef;
+}
+.container
+{
+    padding: 90px;
+}
+.services-list
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div
+{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    transition: background 0.5s, transform 0.5s;
+    border-right: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;
+}
+.services-list div i
+{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2
+{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a
+{
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+    color: #000;
+}
+.read
+{
+    display: inline-block;
+    background-attachment: #0ef;
+    letter-spacing: 1px;
+    color: #081b29;
+    border-radius: 40px;
+    padding: 12px 28px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #0ef;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1.5s;
+}
+.read:hover
+{
+    background-color: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+.services-list div:hover
+{
+    transform: translateY(-8px);
 }
